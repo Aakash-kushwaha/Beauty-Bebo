@@ -109,15 +109,16 @@ const fetchCartfailure=(payload)=>{
 
 
 
-const getData=(payload)=>{
+const getData=(payload,id)=>{
+   
     return(dispatch)=>{
         dispatch(fetchdatarequest())
-  
-   Axios.get("/facewash",{
+        // console.log(id,"id")
+   Axios.get(`/${id}`,{
        params:{
            ...payload
        }
-   }).then((r)=>dispatch(fetchdatasuccess(r.data))).catch((e)=>dispatch(fetchdatafailure(e.data)))
+   }).then((r)=>{ dispatch(fetchdatasuccess(r.data))}).catch((e)=>dispatch(fetchdatafailure(e.data)))
 }
 }
 

@@ -8,19 +8,29 @@ const Filtercomponenets = () => {
  const [searchParam,SetsearchParam]= useSearchParams()
  const [categoryvalues,setCategoryvalues] = React.useState(searchParam.getAll("category") || [])
 
+
+ const categoryHandler=(value)=>{
+  // console.log(value,"value")
+     setCategoryvalues(value)   
+}
+
+
+
  React.useEffect(()=>{
     if(categoryvalues){
       SetsearchParam(({category:categoryvalues}))
       let params ={
         category:searchParam.getAll("category")
       }
-    dispatch(getData(params))
+    // dispatch(getData(params))
     }
  
   },[categoryvalues,searchParam])
+
+
   return (
     <Box>
-      <Box display={{base:"none",md:"block"}} p="1rem 1rem">
+      <Box display={{base:"none",md:"block"}} p="1rem 1rem" border="1px solid red">
         <Text fontSize="2xl">Filters</Text>
         <Text>Category</Text>
         <CheckboxGroup colorScheme='green' defaultValue={categoryvalues} onChange={categoryHandler}>
@@ -33,25 +43,7 @@ const Filtercomponenets = () => {
   </VStack>
 </CheckboxGroup>
       </Box>
-      <Box display={{base:"block",md:"none"}} p = "0rem ,1rem">
-      <Menu closeOnSelect={false}>
-  <MenuButton as={Button} colorScheme='blue'>
-    MenuItem
-  </MenuButton>
-  <MenuList minWidth='240px'>
-    <MenuOptionGroup defaultValue='asc' title='Order' type='radio'>
-      <MenuItemOption value='asc'>Ascending</MenuItemOption>
-      <MenuItemOption value='desc'>Descending</MenuItemOption>
-    </MenuOptionGroup>
-    <MenuDivider />
-    <MenuOptionGroup title='Country' type='checkbox'>
-      <MenuItemOption value='email'>Email</MenuItemOption>
-      <MenuItemOption value='phone'>Phone</MenuItemOption>
-      <MenuItemOption value='country'>Country</MenuItemOption>
-    </MenuOptionGroup>
-  </MenuList>
-</Menu>
-      </Box>
+  
     </Box>
   )
 }

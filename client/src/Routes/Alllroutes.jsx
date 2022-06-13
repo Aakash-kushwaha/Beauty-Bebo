@@ -7,18 +7,10 @@ const Alllroutes = () => {
   return (
     <div>
         <Navbar></Navbar>
-        <Products></Products>
         <Routes>
-            <Route></Route>
-            <Route></Route>
-            <Route></Route>
-            <Route></Route>
-            <Route></Route>
-            <Route></Route>
-            <Route></Route>
-            <Route></Route>
-            <Route></Route>
+          <Route path="/products/:id" element={<Products></Products>}></Route>
         </Routes>
+     
     </div>
   )
 }
