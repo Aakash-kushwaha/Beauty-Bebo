@@ -1,4 +1,4 @@
-import { Box ,Flex,Stack} from '@chakra-ui/react'
+import { Box ,Button,Flex,Stack} from '@chakra-ui/react'
 import React from 'react'
 
 import {useSelector,useDispatch} from "react-redux"
@@ -12,6 +12,8 @@ import {
 } from '@chakra-ui/react';
 import { useParams, useSearchParams } from 'react-router-dom'
 import Filtercomponenets from '../components/Filtercomponenets';
+import {TiShoppingCart} from "react-icons/ti"
+import {BsCart4} from "react-icons/bs"
 
 
 
@@ -35,20 +37,22 @@ const Products = () => {
   },[productsdata?.length,searchParam])
 
   return (
-    <Box display={{base:"flex",md:"flex"}}>
-    <Stack display={{md:"flex"}} flexDirection={{ md:"row"}}>
+    <Box display={{base:"flex",md:"flex"}} >
+    <Stack width="40%" display={{base:"none" ,lg:"flex"}} flexDirection={{ md:"row"}}  border="1px solid red">
       <Box minWidth="15rem">
         <Filtercomponenets></Filtercomponenets>
       </Box>
       </Stack>  
       <Box>
       <Heading as="h3">Products</Heading>
-      <Flex flexWrap="wrap" justifyContent="space-around" justify={"flex"}>
+      <Flex flexWrap="wrap" ml={"4rem"} >
         {  loading? <div>...loading</div> 
         :
        productsdata?.map((el)=><ProductSimple key={el._id} image={el.thumbnail} 
        title={el.title} 
-       price={el.price==undefined?{raw: '$9.47', extracted: 9.47}:el.price}></ProductSimple>) 
+       price={el.price==undefined?{raw: '$9.47', extracted: 9.47}:el.price}
+    //    category={el.condition}
+       ></ProductSimple>) 
         }
       </Flex>
   
@@ -63,13 +67,14 @@ const Products = () => {
  function ProductSimple({image,title,category,price}) {
 
    
-   console.log(price,"price")
+//    console.log(price,"price")
   return (
-    <Center py={12}>
-      <Box
+    <Center py={12} border={"1px solid teal"} display="flex" >
+      <Box 
         role={'group'}
-        p={6}
-        maxW={'330px'}
+        // p={6}
+        maxW={'320px'}
+        maxH={"400px"}
         w={'full'}
         bg={useColorModeValue('white', 'gray.800')}
       
@@ -82,9 +87,7 @@ const Products = () => {
           pos={'relative'}
           height={'230px'}
           _groupHover={{
-            _after: {
-              filter: 'blur(20px)',
-            },
+        
           }}>
           <Image
             rounded={'lg'}
@@ -103,10 +106,10 @@ const Products = () => {
              {price && price.extracted || price.from.extracted}
             </Text>
             <Text textDecoration={'line-through'} color={'gray.600'}>
-            {/* {category} */}
             </Text>
           </Stack>
         </Stack>
+        <Box><Button leftIcon={<BsCart4></BsCart4>} background={"#dd0285"}>Add To Cart</Button></Box>
       </Box>
     </Center>
   );
