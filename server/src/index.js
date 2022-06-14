@@ -4,9 +4,11 @@ app.use(express.json());
 const facewashController =require('./controllers/facewash.controller');
 const skincareController = require('./controllers/skincare.controller');
 const bodywashController = require('./controllers/bodywash.controller');
-const eyelinerController = require('./controllers/eyeliner.controllers')
+const eyelinerController = require('./controllers/eyeliner.controllers');
+const foundationController = require('./controllers/foundation.controller');
 app.use("/facewash",facewashController);
 app.use("/skincare",skincareController);
 app.use("/bodywash",bodywashController);
 app.use("/eyeliner",eyelinerController);
+app.use("/foundation",foundationController);
 module.exports =app;
