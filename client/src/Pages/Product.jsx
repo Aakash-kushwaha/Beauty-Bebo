@@ -22,35 +22,43 @@ import { ChevronDownIcon, ChevronUpIcon } from "@chakra-ui/icons";
 import { MdLocalShipping } from "react-icons/md";
 import { useDispatch, useSelector } from "react-redux";
 import { useParams } from "react-router-dom";
-// import { addproductCart, getSingleProduct } from '../Redux/Products/action';
+
 
 import { BsStar, BsStarFill, BsStarHalf } from "react-icons/bs";
 import { BsCart4 } from "react-icons/bs";
+import { addproductCart, getSingleProduct } from "../Redux/products/action";
 
 export default function Product() {
   const [qty, setqty] = React.useState(1);
-  //   const {id} = useParams()
-  //   const dispatch = useDispatch()
+  const currentproduct = useSelector((store)=>store.productdata.description)
+  console.log(currentproduct,"descriptonpro")
+
+    const {page,id} = useParams()
+    const dispatch = useDispatch()
   //   // console.log(params)
-  //   const currentproduct = useSelector((store)=>store.ecommerceData.currproduct)
 
-  // const loading = useSelector((store)=>store.ecommerceData.loading)
-
+  const loading = useSelector((store)=>store.productdata.loading)
+// console.log(loading,"loading")
   //   console.log(currentproduct,"currentpro")
 
-  //   React.useEffect(()=>{
-  //     if(id){
-  //       dispatch(getSingleProduct(id))
-  //     }
+    React.useEffect(()=>{
+      if(id){
+        // console.log(page,id,"page id")
+        dispatch(getSingleProduct(page,id))
+      }
 
-  //   },[id])
+    },[])
 
   const addToCart = () => {
     // console.log(currentproduct,"curpro")
-    //   currentproduct&& dispatch(addproductCart(currentproduct))
+      currentproduct&& dispatch(addproductCart(currentproduct))
   };
 
+
+
   return (
+    <Box>
+    {loading?<div>...loading</div>:currentproduct?
     <Container maxW={"7xl"}>
       <SimpleGrid
         columns={{ base: 1, lg: 2 }}
@@ -66,7 +74,7 @@ export default function Product() {
             rounded={"md"}
             alt={"product image"}
             src={
-              "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8cHJvZHVjdCUyMGltYWdlc3xlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60"
+              currentproduct.thumbnail
             }
             fit={"contain"}
             align={"center"}
@@ -86,7 +94,7 @@ export default function Product() {
               fontWeight={500}
               fontSize={{ base: "xl", sm: "2xl", lg: "3xl" }}
             >
-              {/* {currentproduct.title} */} Nike Headphones bhi bnanta hai
+              {currentproduct.title} 
             </Heading>
           </Box>
           {/* <Box >{Rating({rating:Number(currentproduct?.rating?.rate)})} </Box> */}
@@ -102,11 +110,9 @@ export default function Product() {
             <Text 
             // border="1px solid black" 
             textAlign={"left"} p={"2"} ml={"6"}>
-              Brand New
+              {currentproduct.condition}
             </Text>
-          </Box>
-
-          <Text
+            <Text
             pl={"2rem"} 
             fontWeight={"700"}
             // border="1px solid black"
@@ -115,8 +121,12 @@ export default function Product() {
             fontSize={"16PX"}
           
           >
-            {/* {currentproduct.price} */}₹20000
+            ₹ {currentproduct.price?.extracted ||currentproduct?.price.from.extracted}
+           
           </Text>
+          </Box>
+
+      
 
           <Box display={{base:"row", lg:"flex"}}
         //    border={"1px solid green"} 
@@ -141,13 +151,13 @@ export default function Product() {
             </Box>
 
             <Box>
-              <Button leftIcon={<BsCart4></BsCart4>} background={"#dd0285"}>
+              <Button onClick={addToCart} leftIcon={<BsCart4></BsCart4>} background={"#dd0285"}>
                 Add To Cart
               </Button>
             </Box>
           </Box>
            
-           <Box display={{base:"row" ,lg:"flex"}} p={"1"}  gap={{base:"1rem" ,lg:"1rem"}} height={"50px"} >    
+           <Box  width="90%" display={{base:"row" ,lg:"flex"}} p={"1"}  gap={{base:"1rem" ,lg:"1rem"}} height={"50px"} >    
            <Box border={"0.2px solid black"} bg="#f1f1f1" fontSize={"md"} fontWeight="bold" p={"1"} mb={"1"}>100% GENUINE PRODUCT</Box>
           <Box border={"1px solid black"} bg="#f1f1f1" fontSize={"md"} fontWeight="bold" p={"1"}  mb={"1"}>EASY RETURN POLICY</Box>
           </Box>
@@ -165,17 +175,17 @@ export default function Product() {
             direction={"column"}
             divider={
               <StackDivider
-                borderColor={useColorModeValue("gray.200", "gray.600")}
+                // borderColor={useColorModeValue("gray.200", "gray.600")}
               />
             }
           >
             <VStack spacing={{ base: 4, sm: 6 }}>
-              <Text fontSize={"lg"}>{/* {currentproduct.description} */}</Text>
+              <Text fontSize={"lg"}>{currentproduct.location}</Text>
             </VStack>
             <Box>
               <Text
                 fontSize={{ base: "16px", lg: "18px" }}
-                color={useColorModeValue("yellow.500", "yellow.300")}
+                // color={useColorModeValue("yellow.500", "yellow.300")}
                 fontWeight={"500"}
                 textTransform={"uppercase"}
                 mb={"4"}
@@ -199,7 +209,7 @@ export default function Product() {
             <Box>
               <Text
                 fontSize={{ base: "16px", lg: "18px" }}
-                color={useColorModeValue("yellow.500", "yellow.300")}
+                // color={useColorModeValue("yellow.500", "yellow.300")}
                 fontWeight={"500"}
                 textTransform={"uppercase"}
                 mb={"4"}
@@ -254,7 +264,9 @@ export default function Product() {
               </List>
             </Box>
           </Stack>
-    </Container>
+    </Container>:""
+    }
+    </Box>
   );
 }
 

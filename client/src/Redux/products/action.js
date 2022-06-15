@@ -34,6 +34,7 @@ const singleProductRequest=(payload)=>{
     }
 }
 const singleProductSuccess=(payload)=>{
+    // console.log(payload,"sucesspayload")
     return{
         type : types.GET_SINGLE_PRODUCT_SUCCESS,
         payload
@@ -101,20 +102,12 @@ const fetchCartfailure=(payload)=>{
 
 
 
-
-
-
-
-
-
-
-
-const getData=(payload,id)=>{
+const getData=(payload,page)=>{
    
     return(dispatch)=>{
         dispatch(fetchdatarequest())
         // console.log(id,"id")
-   Axios.get(`/${id}`,{
+ Axios.get(`/${page}`,{
        params:{
            ...payload
        }
@@ -126,12 +119,12 @@ const getData=(payload,id)=>{
 
 
 
-const getSingleProduct=(id)=>{
+const getSingleProduct=(page,id)=>{
     return(dispatch)=>{
         dispatch(singleProductRequest())
-  
-   Axios.get(`/products/${id}`)
-   .then((r)=>dispatch(singleProductSuccess(r.data)))
+//    console.log("page",page,"id",id)
+   Axios.get(`/${page}/${id}`)
+   .then((r)=>{dispatch(singleProductSuccess(r.data))})
    .catch((e)=>dispatch(singleProductFailure(e.data)))
 }
 }
@@ -145,7 +138,7 @@ const getCartData=()=>dispatch=>{
 
 
 const  addproductCart =(product)=>(dispatch)=>{
-    
+    // console.log(product,"product")
     dispatch(addproductCartRequest())
     console.log(product,"pro")
 
@@ -168,4 +161,6 @@ const  addproductCart =(product)=>(dispatch)=>{
 
 
 
-export {getData,getSingleProduct,addproductCart,getCartData}    
+export {getData,getSingleProduct,
+    addproductCart,
+    getCartData}    

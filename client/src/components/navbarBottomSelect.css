@@ -1,0 +1,72 @@
+/* #navBottomSelect {
+    position: relative;
+    top: 2.62rem;
+    left: -54rem;
+  
+    background-color: white;
+    border: 1px solid lightgray;
+    height: 17rem;
+    width: 15rem;
+    padding: 10px 15px;
+    padding-right: 0;
+  }
+  #navBottomSelect Link {
+    text-decoration: none;
+  }
+  
+  .navBottomSelectHide:hover {
+    font-weight: bold;
+    color: #074ea3; 
+  }
+
+    */
+
+#navBottomSelectHomeDiv {
+  position: relative;
+  top: 0.5rem;
+  left: 20rem;
+  color: #0f0f0f;
+  border: 1px solid lightgray;
+  background-color: rgb(228, 15, 15);
+  padding: 10px;
+  display: flex;
+  justify-content: space-around;
+  font-size: 0.9rem;
+  width: 60rem;
+  visibility: visible;
+  border: 1px solid brown;
+
+}
+#navBottomSelectHomeDiv div *:hover {
+  color: #074ea3;
+  font-size: 1rem;
+  visibility: visible;
+  border: none;
+
+}
+
+#navBottomSelectHomeDiv {
+  background: #ccc;
+  visibility: visible;
+  
+}
+
+#navBottomSelectHomeDiv:hover {
+  background: #ccc;
+  visibility: visible;
+  border: none;
+
+}
+#navBottomSelectHomeDiv:not(:hover) {
+  visibility: visible;
+  border: none;
+
+  /* transform: scale(0.8) translateZ(0px); */
+}
+
+#navBottomSelectHomeDiv div {
+  margin-left: 15px;
+  border: none;
+  visibility: visible;
+
+}

@@ -4,7 +4,8 @@ const inistate = {
     postproduct : null,
     loading:false,
     error:"",
-    getProduct:null
+    getProduct:null,
+    description:null
 
 
 }
@@ -31,6 +32,25 @@ const Productreducer=(state=inistate, {type,payload})=>{
           error:payload
             }
         }
+        case types.GET_SINGLE_PRODUCT_REQUEST:{
+          return {
+              ...state,
+              loading:true
+          }
+      }
+     case types.GET_SINGLE_PRODUCT_SUCCESS:{
+          return{
+        ...state,
+        loading:false,
+        description:payload
+          }
+      }
+      case types.GET_SINGLE_PRODUCT_FAILURE:{
+          return{
+        ...state,
+        error:payload
+          }
+      }
         default:
             return state
       }

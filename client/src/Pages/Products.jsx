@@ -2,7 +2,7 @@ import { Box ,Button,Flex,Stack} from '@chakra-ui/react'
 import React from 'react'
 
 import {useSelector,useDispatch} from "react-redux"
-import {getData} from "../Redux/products/action"
+import {getData, getSingleProduct} from "../Redux/products/action"
 import {
   Center,
   useColorModeValue,
@@ -10,10 +10,11 @@ import {
   Text,
   Image,
 } from '@chakra-ui/react';
-import { useParams, useSearchParams } from 'react-router-dom'
+import { Navigate, useNavigate, useParams, useSearchParams } from 'react-router-dom'
 import Filtercomponenets from '../components/Filtercomponenets';
 import {TiShoppingCart} from "react-icons/ti"
 import {BsCart4} from "react-icons/bs"
+import Footer from './Footer';
 
 
 
@@ -21,22 +22,31 @@ const Products = () => {
 
   const productsdata = useSelector((store)=>store.productdata.getProduct)
   const loading = useSelector((store)=>store.productdata.loading)
-  console.log(loading,"loading")
+  // console.log(loading,"loading")
   const[searchParam] = useSearchParams()
-  console.log(productsdata,"productsdata")
+  // console.log(productsdata,"productsdata")
   const dispatch = useDispatch()
-  const {id} = useParams()
+  const {page} = useParams()
+  const navigate = useNavigate()
   
 
   React.useEffect(()=>{
       let params ={
         category:searchParam.getAll("category")
       }
-    dispatch(getData(params,id))
+    dispatch(getData(params,page))
    
   },[productsdata?.length,searchParam])
 
+
+
+  const sendToDescription=(id)=>{
+//  console.log(id,"idprodcuts")  
+     navigate(`/products/${page}/${id}`)
+  }
+
   return (
+    <Box>
     <Box display={{base:"flex",md:"flex"}} >
     <Stack width="40%" display={{base:"none" ,lg:"flex"}} flexDirection={{ md:"row"}}  border="1px solid red">
       <Box minWidth="15rem">
@@ -49,8 +59,9 @@ const Products = () => {
         {  loading? <div>...loading</div> 
         :
        productsdata?.map((el)=><ProductSimple key={el._id} image={el.thumbnail} 
-       title={el.title} 
+       title={el.title}  id={el._id}
        price={el.price==undefined?{raw: '$9.47', extracted: 9.47}:el.price}
+       sendToDescription={sendToDescription}
     //    category={el.condition}
        ></ProductSimple>) 
         }
@@ -58,19 +69,21 @@ const Products = () => {
   
       </Box>
     </Box>
+    
+    </Box>
   )
 }
 
 
 
 
- function ProductSimple({image,title,category,price}) {
+ function ProductSimple({image,title,category,price,sendToDescription,id}) {
 
    
 //    console.log(price,"price")
   return (
-    <Center py={12} border={"1px solid teal"} display="flex" >
-      <Box 
+    <Center py={12} border={"1px solid teal"} display="flex" zIndex={"-10"} >
+      <Box onClick={()=>sendToDescription(id)}
         role={'group'}
         // p={6}
         maxW={'320px'}
