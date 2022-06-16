@@ -5,7 +5,8 @@ const inistate = {
     loading:false,
     error:"",
     getProduct:null,
-    description:null
+    description:null,
+    cart : null
 
 
 }
@@ -51,6 +52,25 @@ const Productreducer=(state=inistate, {type,payload})=>{
         error:payload
           }
       }
+      case types.FETCH_CART_REQUEST:{
+        return {
+            ...state,
+            loading:true
+        }
+    }
+   case types.FETCH_CART_SUCCESS:{
+        return{
+      ...state,
+      loading:false,
+      cart:payload
+        }
+    }
+    case types.FETCH_CART_FAILURE:{
+        return{
+      ...state,
+      error:payload
+        }
+    }
         default:
             return state
       }

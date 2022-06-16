@@ -3,6 +3,7 @@ import "./megamenu.css";
 import { Link } from "react-router-dom";
 import {background, Box, Button } from "@chakra-ui/react";
 import {BsCartPlusFill} from "react-icons/bs"
+import Cartcounter from "./Cartcounter";
 
 const Megha = () => {
   const [hover, setHover] = React.useState(false);
@@ -2199,8 +2200,10 @@ const Megha = () => {
           </ul>
           <div>
           <Box>
-              <Button _hover={{ bg: '#dd0285' }} bg={"#dd0285"} fontWeight={"bold"} color="white" leftIcon={<BsCartPlusFill></BsCartPlusFill>}>My CArt</Button>
-            </Box>
+            <Link to="/cart"><Button _hover={{ bg: '#dd0285' }} bg={"#dd0285"} fontWeight={"bold"} color="white" leftIcon={<BsCartPlusFill></BsCartPlusFill>}>My CArt</Button>
+            </Link>  
+            <Cartcounter></Cartcounter>
+              </Box>
           </div>
         </div>
       </nav>
