@@ -73,13 +73,14 @@ export default function Product() {
           <Image
             rounded={"md"}
             alt={"product image"}
+            // border="2px solid red"
             src={
               currentproduct.thumbnail
             }
             fit={"contain"}
             align={"center"}
             w={"90%"}
-            h={{ base: "100%", sm: "400px", lg: "500px" }}
+            h={{ base: "100%", sm: "400px", lg: "400px" }}
             m="auto"
           />
         </Flex>

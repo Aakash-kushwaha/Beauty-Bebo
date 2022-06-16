@@ -33,7 +33,7 @@ const Signup = () => {
           <span>Confirem Password</span>
             <Input></Input>
           </div>
-          <Button   bg={"#444444"}  _hover={{ bg: '#dd0285' }}>Create Account</Button>
+          <Button color={"white"}  bg={"#444444"}  _hover={{ bg: '#dd0285' }}>Create Account</Button>
       </div>
     </div>
   )
