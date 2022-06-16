@@ -5,6 +5,7 @@ import { getCartData } from '../Redux/products/action'
 
 const Cart = () => {
 
+
    const [data,setData] = useState([]);
   const [qty,setQty]=useState(1);
   const [totalPrice,setTotalPrice] = useState(0)
@@ -17,8 +18,7 @@ const Cart = () => {
   }
   getdata();
  },[])
-
-  return (
+ return (
     <div className="grid grid-cols-10 gap-2 pt-16 bg-red">
       <div className="Items col-span-7 pl-20">
     <div>SHOPPING CART</div>

@@ -59,7 +59,7 @@ const addproductCartRequest=(payload)=>{
     }
 }
 const addproductCartsuccess=(payload)=>{
-    console.log(payload,"payload")
+    console.log(payload,"cart payload")
     return{
         type : types.ADD_PRODUCT_CART_SUCCESS,
         payload
@@ -143,10 +143,27 @@ const  addproductCart =(product)=>(dispatch)=>{
     console.log(product,"pro cart")
 
    Axios.post("/cart",product)
-   .then((res)=>{dispatch(addproductCartsuccess(res.data))})
-   .catch((err)=>{dispatch(addproductCartfailure(err.data))})
+   .then((res)=>{console.log(res,"res146") ;dispatch(addproductCartsuccess(res.data.data))
+}).catch((err)=>{dispatch(addproductCartfailure(err.data))
+})
 }
 
+// const  addproductCart =(product)=>async(dispatch)=>{
+//     console.log(product,"cartpro")
+
+//     dispatch(addproductCartRequest())
+//    let res=   await fetch("http://localhost:8080/cart",{
+//       method: "PATCH",
+//       headers: {"content-type": "application/json"},
+//      body: JSON.stringify({
+//         product
+     
+//      })
+//     }) 
+//     .then((res)=>{console.log(res,"rescart162") ;dispatch(addproductCartsuccess(res.data))})
+//     .catch((err)=>{dispatch(addproductCartfailure(err.data))})
+    
+//   }
 
 
 

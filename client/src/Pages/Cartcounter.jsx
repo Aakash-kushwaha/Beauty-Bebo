@@ -5,14 +5,14 @@ import { getCartData } from '../Redux/products/action'
 
 
 const Cartcounter = () => {
- const cart = useSelector((store)=>store.productdata.cart)
-//  console.log(cart,"cartdatafetche")
- const dispatch = useDispatch()
- React.useEffect(()=>{
+//  const cart = useSelector((store)=>store.productdata.cart)
+// //  console.log(cart,"cartdatafetche")
+//  const dispatch = useDispatch()
+//  React.useEffect(()=>{
         
-                dispatch(getCartData())
+//                 dispatch(getCartData())
     
- },[cart?.length])
+//  },[cart?.length])
   return (
     <Box textColor={"white"}
      backgroundColor="black"
@@ -25,7 +25,7 @@ const Cartcounter = () => {
       top="0"
     
       >
-      {cart?.length? cart.length:0}
+      {/* {cart?.length? cart.length:0} */}
       </Box>
   )
 }

@@ -8,7 +8,7 @@ const inistate = {
     error:"",
     getProduct:null,
     description:null,
-    cart : null
+    cart : null,
 
 
 }
