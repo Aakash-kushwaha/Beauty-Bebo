@@ -20,19 +20,11 @@ router.get('/:id', async function(req, res){
 })
 router.post('/', async function(req, res){
     try{
-        const cart = await Cart.create(req.body);
+        const cart = await Cart.create({data:req.body});
         return res.status(200).send(cart)
     }catch(err){
         res.status(500).send(err.message)
     }
 })
-router.patch('/', async function(req, res){
-    try{
-        const cart =await Cart.find();
-        cart.push(req.body);
-        return res.status(201).send(cart)
-    }catch(err){
-        return res.status(500).send(err.message)
-    }
-})
+
 module.exports = router;
