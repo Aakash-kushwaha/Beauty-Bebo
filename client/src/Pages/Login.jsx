@@ -1,44 +1,31 @@
-import { Axios } from 'axios'
 import React from 'react'
+import styles from "./login.module.css"
+import {Button, Flex, Input} from "@chakra-ui/react"
 
-function Login() {
-  const getdata =async()=>{
-    let res = await fetch("http://localhost:8080/facewash")
-    let data = await res.json()
-    console.log(data)
-  }
-
-  let data = {
-    title:"aaksh",
-    link:"wwww.google.com"
-
-  }
-
-
-
-  const Postdata =async(value)=>{
-   let res= await fetch("http://localhost:8080/facewash",{
-      method:"POST",
-      headers:{"Content-Type":"application/json"},
-      body:JSON.stringify(
-        value
-      )
-
-    })
-    let data = await res.json()
-    console.log("postdata",data)
-  
-  }
-
-  
-React.useEffect(()=>{
-//  getdata()
-//  Postdata(data)
-},[])
-
-
+const Login = () => {
   return (
-    <div>Login</div>
+    <div>
+       <Flex justifyContent={"space-around"} mt="10rem">
+        <div className={styles.container}>
+          <h1 className = {styles.heading}>REGISTER CUSTOMER</h1>
+          <p className={styles.suggestion}>If you have an account sign in with your gmail address</p>
+          <div className={styles.utilites}>
+            <span>EMAIL</span>
+            <Input></Input>
+          </div>
+          <div className={styles.utilites}>
+            <span>PASSWORD</span>
+            <Input></Input>
+          </div>
+          <Button bg={"#444444"}  _hover={{ bg: '#dd0285' }}>SIGN IN</Button>
+        </div>
+        <div className={styles.container}>
+        <h1 className = {styles.heading}>REGISTER CUSTOMER</h1>
+        <p className={styles.suggestion}>Creating an account has many benefits: check out faster, keep more than one address, track orders and more.</p>
+        <Button  bg={"#444444"}  _hover={{ bg: '#dd0285' }}>CREATE ACCOUNT</Button>
+        </div>
+       </Flex>
+    </div>
   )
 }
 

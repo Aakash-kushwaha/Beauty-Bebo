@@ -1,0 +1,30 @@
+.container{
+    width: 40%;
+    height: 400px;
+    /* border:1px solid red; */
+    padding: 2rem;
+    background-color: #fafafa;
+    border:2px solid whitesmoke;
+
+}
+
+.utilites{
+    margin-bottom: 1rem;
+}
+
+.heading{
+    margin-bottom: 2rem;;
+}
+
+.suggestion{
+    margin-bottom: 1rem;
+}
+
+.Button{
+    background-color: #444444;
+    color: white;
+} 
+
+.Button:hover{
+    background-color: #dd0285;
+}

@@ -81,7 +81,7 @@ const fetchCartRequest=(payload)=>{
     }
 }
 const fetchCartsuccess=(payload)=>{
-    console.log(payload,"cartpayload")
+    // console.log(payload,"cartpayload")
     return{
         type : types.FETCH_CART_SUCCESS,
         payload

@@ -12,6 +12,7 @@ import {
 } from '@chakra-ui/react'
 import { ChevronDownIcon } from '@chakra-ui/icons'
 import {FaUserAlt} from "react-icons/fa"
+import { Link } from 'react-router-dom'
 
 const Profile = () => {
   return (
@@ -24,8 +25,8 @@ const Profile = () => {
         <FaUserAlt></FaUserAlt>
       </MenuButton>
       <MenuList zIndex={"100"}>
-        <MenuItem>Download</MenuItem>
-        <MenuItem onClick={() => alert('Kagebunshin')}>Create a Copy</MenuItem>
+        <MenuItem><Link to="/login" >Log in</Link> </MenuItem>
+        <MenuItem ><Link to="/signup" >Sign up</Link></MenuItem>
       </MenuList>
     </>
   )}

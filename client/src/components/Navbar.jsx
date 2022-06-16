@@ -1,30 +1,25 @@
+import { useState } from "react";
+import { Link, useNavigate } from "react-router-dom";
+import Profile from "./Profile";
+
 import {
   Box,
   Flex,
   IconButton,
   Image,
-  Img,
+
   Input,
-  Menu,
-  MenuButton,
-  MenuList,
+
   Select,
-  MenuItem,
-  Text,
-  Stack,
-  Button,
+
 } from "@chakra-ui/react";
 import "./navbarBottomSelect.css";
 import React from "react";
 import logo from "./images/beautybebo.png";
 // import flag from "../Assets/flag.jpg";
 import { FiSearch } from "react-icons/fi";
-import { FaRegUser } from "react-icons/fa";
-import { FiShoppingCart } from "react-icons/fi";
-import { FiMenu } from "react-icons/fi";
-import { useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
-import Profile from "./Profile";
+;
+
 
 export const Navbar = () => {
   const [searchValue, setSearchValue] = useState("");

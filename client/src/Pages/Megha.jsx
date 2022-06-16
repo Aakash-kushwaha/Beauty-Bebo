@@ -1,7 +1,7 @@
 import React from "react";
 import "./megamenu.css";
 import { Link } from "react-router-dom";
-import {background, Box, Button } from "@chakra-ui/react";
+import {background, Box, Button, Heading } from "@chakra-ui/react";
 import {BsCartPlusFill} from "react-icons/bs"
 import Cartcounter from "./Cartcounter";
 
@@ -9,7 +9,7 @@ const Megha = () => {
   const [hover, setHover] = React.useState(false);
   return (
     <>
-      <nav className="menu">
+      <nav className="menu" >
         <div className="wrapper" display="flex" gap="4rem" style={{height:"50px" ,background:"#dd0285"}}>
           <div className="logo">
             <input type="radio" name="slide" id="menu-btn" />
@@ -25,82 +25,76 @@ const Megha = () => {
                 className="desktop-item"
                 onClick={() => setHover((prev) => !prev)}
               >
-                Kids
+                MAKEUP
               </a>
-              <input type="checkbox" id="showMega" />
-              <label htmlFor="showMega" className="mobile-item">
-                Services
-              </label>
-
               <div className="mega-box">
                 <div className="content">
                   <div className="row">
-                    <header>Kids: Get Inspired</header>
-                    <hr id="horizontal-line" />
+                  <Heading fontSize={"20px"}>FACE</Heading>
                     <ul className="mega-links">
                       <li>
                         <Link to="products/facewash" id="bold">
-                          Mother's Day Gifts
+                         BB Cream
                         </Link>
                       </li>
                       <li>
                         <Link to="/gift" id="bold">
-                          New Arrivals
+                         Blush
                         </Link>
                       </li>
                       <li>
                         <Link to="/gift" id="bold">
-                          Best Sellers
+                         Bronzer
                         </Link>
                       </li>
                       <li>
                         <Link to="/gift" id="bold">
-                          Sandals Under $20
+                         CC Cream
                         </Link>
                       </li>
                       <li>
                         <Link to="/gift" id="bold">
-                          Sneakers Under $30
+                          Contour
                         </Link>
                       </li>
                       <li>
                         <Link to="/gift" id="bold">
-                          Nike for the Family
+                          Concealer
                         </Link>
                       </li>
                       <li>
                         <Link to="/gift" id="bold">
-                          Swim Shop
+                          Compact & Powder
                         </Link>
                       </li>
                       <li>
                         <Link to="/gift" id="bold">
-                          Disney Shop
+                          Face Primer
                         </Link>
                       </li>
                       <li>
                         <Link to="/gift" id="bold">
-                          Z by Zella for the Family
+                         Foundation
                         </Link>
                       </li>
                       <li>
                         <Link to="/gift" id="bold">
-                          Rack Essentials
+                         Highlighter
                         </Link>
                       </li>
                       <li>
                         <Link to="/gift" id="bold">
-                          Baby Shower Gifts
+                          Loose Powder
                         </Link>
                       </li>
                       <li>
                         <Link to="/gift" id="bold">
-                          Shop by Occasion
+                         Makeup Remover
                         </Link>
                       </li>
                       <li>
                         <Link to="/gift" id="bold">
-                          Shop By Brand
+                          
                         </Link>
                       </li>
                       <li>

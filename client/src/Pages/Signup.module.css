@@ -1,0 +1,34 @@
+.container{
+    width: 50%;
+    margin: auto;
+    height: 600px;
+    border:2px solid whitesmoke;
+    line-height: 2rem;
+    padding: 2rem;
+    background-color: #fafafa;
+}
+
+.heading{
+   font-size: large;
+}
+
+.inputdiv{
+   margin-bottom: 1rem;
+}
+
+/* span {
+    padding: 1rem
+}
+
+Input{
+    padding: 1rem;
+}*/
+
+.Button{
+    background-color: #444444;
+    color: white;
+} 
+
+.Button:hover{
+    background-color: #dd0285;
+}

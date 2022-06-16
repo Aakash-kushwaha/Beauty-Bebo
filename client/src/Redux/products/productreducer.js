@@ -1,6 +1,8 @@
 import * as types from "./actionType"
-
+import data from "../../dataslider/data.json"
+const Data = data.data
 const inistate = {
+    data:[...Data],
     postproduct : null,
     loading:false,
     error:"",

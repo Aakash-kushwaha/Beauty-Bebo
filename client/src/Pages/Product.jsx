@@ -59,7 +59,7 @@ export default function Product() {
   return (
     <Box>
     {loading?<div>...loading</div>:currentproduct?
-    <Container maxW={"7xl"}>
+    <Container maxW={"7xl"} textAlign="center">
       <SimpleGrid
         columns={{ base: 1, lg: 2 }}
         spacing={{ base: 8, md: 10 }}

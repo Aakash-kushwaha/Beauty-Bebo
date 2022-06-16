@@ -82,7 +82,7 @@ const Products = () => {
    
 //    console.log(price,"price")
   return (
-    <Center py={12} border={"1px solid teal"} display="flex" zIndex={"-10"} >
+    <Center py={12} border={"1px solid teal"} display="flex" zIndex={"-10"}   textAlign="center">
       <Box onClick={()=>sendToDescription(id)}
         role={'group'}
         // p={6}
