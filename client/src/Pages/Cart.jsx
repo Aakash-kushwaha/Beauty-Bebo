@@ -6,10 +6,14 @@ import { getCartData } from '../Redux/products/action'
 const Cart = () => {
 
    const [data,setData] = useState([])
-  const cartdata = useSelector((store)=>store.productdata.cart);
+  const cartdata = useSelector((store)=>store.productdata);
+  console.log(cartdata,"cardata")
  useEffect(()=>{
   setData(cartdata)
  },[cartdata])
+
+
+  console.log(cartdata)
  
   return (
     <div>

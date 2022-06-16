@@ -87,7 +87,7 @@ const Products = () => {
  function ProductSimple({image,title,category,price,sendToDescription,id,el}) {
 
    
-   console.log(price,"price")
+  //  console.log(price,"price")
   return (
     <div>
       <div className={styles.container} >
