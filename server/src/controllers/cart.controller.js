@@ -26,5 +26,13 @@ router.post('/', async function(req, res){
         res.status(500).send(err.message)
     }
 })
-
+router.patch('/', async function(req, res){
+    try{
+        const cart =await Cart.find();
+        cart.push(req.body);
+        return res.status(201).send(cart)
+    }catch(err){
+        return res.status(500).send(err.message)
+    }
+})
 module.exports = router;
