@@ -36,7 +36,7 @@ const Products = () => {
       }
     dispatch(getData(params,page))
    
-  },[productsdata?.length,searchParam])
+  },[productsdata?.length,searchParam,page])
 
 
 

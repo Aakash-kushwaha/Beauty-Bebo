@@ -23,19 +23,16 @@ import { FaRegUser } from "react-icons/fa";
 import { FiShoppingCart } from "react-icons/fi";
 import { FiMenu } from "react-icons/fi";
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import Profile from "./Profile";
 
 export const Navbar = () => {
-  const [isVisible, setIsVisible] = useState(false);
+  const [searchValue, setSearchValue] = useState("");
+  const navigate = useNavigate()
 
-  function over(e) {
-    setIsVisible(true);
-  }
-  function out(e) {
-    setIsVisible(false);
-  }
-
+const Search=()=>{
+  navigate(`/products/${searchValue}`)
+}
   return (
     <Box bg={"white"}>
       <Flex
@@ -91,6 +88,7 @@ export const Navbar = () => {
               placeholder="Search By Keyword"
               width={"30rem"}
              border="none"
+             onChange={(e)=>setSearchValue(e.target.value)}
             />
             <IconButton
               bg="#dd0285"
@@ -98,6 +96,7 @@ export const Navbar = () => {
               color={"white"}
               fontSize="1.5rem"
               borderRadius={"0"}
+              onClick={()=>Search()}
               icon={<FiSearch />}
             />
           </Flex>
