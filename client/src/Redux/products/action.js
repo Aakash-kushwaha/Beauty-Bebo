@@ -140,7 +140,7 @@ const getCartData=()=>dispatch=>{
 const  addproductCart =(product)=>(dispatch)=>{
     // console.log(product,"product")
     dispatch(addproductCartRequest())
-    console.log(product,"pro")
+    console.log(product,"pro cart")
 
    Axios.post("/cart",product)
    .then((res)=>{dispatch(addproductCartsuccess(res.data))})

@@ -79,7 +79,8 @@ nav .wrapper {
 
 }
 #bold{
-    font-weight: 600;
+    font-weight: 400;
+    /* font-size: 14px; */
 }
 .nav-links li a {
   color:white;
@@ -155,10 +156,11 @@ nav .wrapper {
 }
 .mega-box .content .row {
   width: calc(60% - 80px);
-  line-height: 45px;
+  line-height: 1.5rem;
   display: flex;
   flex-direction:column;
   justify-content: top;
+  font-size: 14px;
 }
 
 .content .row header {
@@ -366,3 +368,4 @@ nav input {
 /* .desktop-item{
   display: block;
 } */
+

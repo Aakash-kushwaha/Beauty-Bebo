@@ -30,7 +30,7 @@ const Megha = () => {
               <div className="mega-box">
                 <div className="content">
                   <div className="row">
-                  <Heading fontSize={"20px"}>FACE</Heading>
+                  <Heading fontSize={"16px"}>FACE</Heading>
                     <ul className="mega-links">
                       <li>
                         <Link to="products/facewash" id="bold">
@@ -94,220 +94,159 @@ const Megha = () => {
                       </li>
                       <li>
                         <Link to="/gift" id="bold">
-                          
+                          Makeup Kits
                         </Link>
                       </li>
                       <li>
                         <Link to="/gift" id="bold">
-                          Nordstrom Made
+                          Makeup Remover
                         </Link>
                       </li>
                       <li>
                         <Link to="/gift" id="bold">
-                          Clearance
+                          Setting Spray
                         </Link>
                       </li>
                     </ul>
                   </div>
                   <div className="row">
-                    <header>Girls' Clothing</header>
+                    <Heading fontSize={"16px"}>EYE</Heading>
                     <ul className="mega-links">
                       <li>
                         <Link to="/products/women">
-                          Baby Girl (Sizes 0-24M)
+                         Contact Lenses
                         </Link>
                       </li>
                       <li>
                         <Link to="/products/women">
-                          Toddler Girls (Sizes 2T-4T)
+                        Eye Kit
                         </Link>
                       </li>
                       <li>
-                        <Link to="/products/women">Girls (Sizes 4-6x)</Link>
+                        <Link to="/products/women">Eyeliner</Link>
                       </li>
                       <li>
-                        <Link to="/products/women">Girls (Sizes 7-16)</Link>
+                        <Link to="/products/women">Eye Shadow</Link>
                       </li>
                       <li>
-                        <Link to="/products/women">Tween Girls</Link>
+                        <Link to="/products/women">Eye Primer</Link>
                       </li>
                       <li>
-                        <Link to="/products/women">Accessories</Link>
+                        <Link to="/products/women">Eye-Palettes</Link>
                       </li>
                       <li>
-                        <Link to="/products/women">Activewear s</Link>
+                        <Link to="gift">Eye Makeup Remover</Link>
                       </li>
                       <li>
-                        <Link to="/products/women">Coats & Jackets</Link>
+                        <Link to="gift">Eye Brow Enhancer</Link>
                       </li>
                       <li>
-                        <Link to="/products/women">Dresses & Rompers</Link>
+                        <Link to="/products/women">False Eyelashes</Link>
                       </li>
                       <li>
-                        <Link to="/products/women">Jeans</Link>
+                        <Link to="/products/women">Kajal</Link>
                       </li>
                       <li>
-                        <Link to="/products/women">Pajamas & Robes</Link>
+                        <Link to="/products/women">Mascara</Link>
                       </li>
                       <li>
-                        <Link to="/products/women">Pants & Leggings</Link>
-                      </li>
-                      <li>
-                        <Link to="/products/women">Shorts</Link>
-                      </li>
-                      <li>
-                        <Link to="/products/women">Skirts</Link>
-                      </li>
-                      <li>
-                        <Link to="/products/women">Swimsuits & Cover-Ups</Link>
-                      </li>
-                      <li>
-                        <Link to="/products/women">Tops</Link>
-                      </li>
-                      <li>
-                        <Link to="/products/women">Underwear, Socks & Bra</Link>
+                        <Link to="/products/women">Under Eye Concealer</Link>
                       </li>
                     </ul>
                   </div>
                   <div className="row">
-                    <header>Boys' Clothing</header>
+                    <Heading fontSize={"16px"}>LIPS</Heading>
                     <ul className="mega-links">
                       <li>
-                        <Link to="/products/Men">Baby Boy (Sizes 0-24M)</Link>
+                        <Link to="/products/Men">Lipstick</Link>
                       </li>
                       <li>
                         <Link to="/products/Men">
-                          Toddler Boys (Sizes 2T-4T)
+                        Liquid Lipstick
                         </Link>
                       </li>
                       <li>
-                        <Link to="/products/Men">Boys (Sizes 4-7)</Link>
+                        <Link to="/products/Men">Lip Liner</Link>
                       </li>
                       <li>
-                        <Link to="/products/Men">Boys (Sizes 8-20)</Link>
+                        <Link to="/products/Men">Lip Gloss</Link>
                       </li>
                       <li>
-                        <Link to="/products/Men">Accessories</Link>
+                        <Link to="/products/Men">Lip Balm</Link>
                       </li>
                       <li>
-                        <Link to="/products/Men">Activewear</Link>
+                        <Link to="/products/Men">Lip Crayon</Link>
                       </li>
                       <li>
-                        <Link to="/products/Men">Coats & Jackets</Link>
+                        <Link to="/products/Men">Lip Stain</Link>
                       </li>
                       <li>
-                        <Link to="/products/Men">Jeans</Link>
-                      </li>
-                      <li>
-                        <Link to="/products/Men">Pajamas & Robes</Link>
-                      </li>
-                      <li>
-                        <Link to="/products/Men">Pants</Link>
-                      </li>
-                      <li>
-                        <Link to="/products/Men">Sets</Link>
-                      </li>
-                      <li>
-                        <Link to="/products/Men">Shirts & Tops</Link>
-                      </li>
-                      <li>
-                        <Link to="/products/Men">Shorts</Link>
-                      </li>
-                      <li>
-                        <Link to="/products/Men">Suits & Separates</Link>
-                      </li>
-                      <li>
-                        <Link to="/products/Men">Swim Trunks & Rashguards</Link>
-                      </li>
-                      <li>
-                        <Link to="/products/Men">T-Shirts</Link>
-                      </li>
-                      <li>
-                        <Link to="/products/Men">Underwear & Socks</Link>
+                        <Link to="/products/Men">Lip Plumber</Link>
                       </li>
                     </ul>
                   </div>
 
                   <div className="row">
-                    <header>Kids' Shoes</header>
+                    <Heading fontSize={"16px"}>Nails</Heading>
                     <ul className="mega-links">
                       <li>
-                        <Link to="/#">Baby (Sizes 0-4)</Link>
+                        <Link to="/#">Manicure & Pedicure Kits</Link>
                       </li>
                       <li>
-                        <Link to="/#">Toddler (Sizes 4.5-12)</Link>
+                        <Link to="/#"> Nail Polish</Link>
                       </li>
                       <li>
-                        <Link to="/#">Little Kid (Sizes 12.5-3)</Link>
+                        <Link to="/#">Nail Care</Link>
                       </li>
                       <li>
-                        <Link to="/#">Big Kid (Sizes 3.5-7)</Link>
-                      </li>
-                      <li>
-                        <Link to="/products/Shoes" id="bold">
-                          Girls' Shoes
-                        </Link>
-                      </li>
-                      <li>
-                        <Link to="/products/Shoes">Baby (Sizes 0-4)</Link>
-                      </li>
-                      <li>
-                        <Link to="/products/Shoes">Toddler (Sizes 4.5-12)</Link>
-                      </li>
-                      <li>
-                        <Link to="/products/Shoes">
-                          Little Kid (Sizes 12.5-3)
-                        </Link>
-                      </li>
-                      <li>
-                        <Link to="/products/Shoes">Big Kid (Sizes 3.5-7)</Link>
+                        <Link to="/#">Nail Polish</Link>
                       </li>
                       <li>
                         <Link to="/products/Shoes" id="bold">
-                          Boys' Shoes
+                        Nail Art Kits
                         </Link>
                       </li>
                       <li>
-                        <Link to="/products/Shoes">Baby (Sizes 0-4)</Link>
+                        <Link to="/products/Shoes">Nail Polish Remover</Link>
                       </li>
-                      <li>
-                        <Link to="/products/Shoes">Toddler (Sizes 4.5-12)</Link>
-                      </li>
-                      <li>
-                        <Link to="/products/Shoes">
-                          Little Kid (Sizes 12.5-3)
-                        </Link>
-                      </li>
-                      <li>
-                        <Link to="/products/Shoes">Big Kid (Sizes 3.5-7)</Link>
-                      </li>
+                     
                     </ul>
                   </div>
                   <div className="row">
-                    <header>Security Services</header>
+                    <Heading fontSize={"16px"}>TOOTH BRUSHES</Heading>
                     <ul className="mega-links">
                       <li>
-                        <Link to="/products/Men">Baby Clothing & Shoes</Link>
+                        <Link to="/products/Men">Blush</Link>
                       </li>
                       <li>
-                        <Link to="/products/women">Baby Girl</Link>
+                        <Link to="/products/women">Eyelash Curles</Link>
                       </li>
                       <li>
-                        <Link to="/products/Men">Baby Boy</Link>
+                        <Link to="/products/Men">Face Brush</Link>
                       </li>
                       <li>
-                        <Link to="/products/Shoes">Baby Shoes</Link>
+                        <Link to="/products/Shoes">Lip Brush</Link>
                       </li>
 
                       <li>
-                        <Link to="/#">Baby Gear & Essentials</Link>
+                        <Link to="/#">Makeup Pouches</Link>
                       </li>
                       <li>
-                        <Link to="/gift">Baby Shower Gifts</Link>
+                        <Link to="/gift">Mirrors</Link>
                       </li>
                       <li>
                         <Link to="/#" id="bold">
-                          Toys
+                          Sponges & Application
+                        </Link>
+                      </li>
+                      <li>
+                        <Link to="/#" id="bold">
+                         Sharpners
+                        </Link>
+                      </li>
+                      <li>
+                        <Link to="/#" id="bold">
+                          Tweezers
                         </Link>
                       </li>
                     </ul>
@@ -321,199 +260,129 @@ const Megha = () => {
                 className="desktop-item"
                 onClick={() => setHover((prev) => !prev)}
               >
-                Shoes
+                SKIN
               </a>
               <input type="checkbox" id="showMega" />
-              <label htmlFor="showMega" className="mobile-item">
-                Services
-              </label>
 
               <div className="mega-box">
                 <div className="content">
                   <div className="row">
-                    <header>Shoes: Get Inspired</header>
-                    <hr id="horizontal-line" />
+                  <Heading  fontSize={"16px"}>EYE CARE</Heading>
                     <ul className="mega-links">
                       <li>
                         <Link to="/gift" id="bold">
-                          Mother's Day Gifts
+                         Dark Circles
                         </Link>
                       </li>
                       <li>
                         <Link to="/gift" id="bold">
-                          New Arrivals
+                        Eye Contour
                         </Link>
                       </li>
                       <li>
                         <Link to="/gift" id="bold">
-                          Best Sellers
+                         Eye Cream
                         </Link>
                       </li>
                       <li>
                         <Link to="/gift" id="bold">
-                          Designer Brands
+                          Eye Mask
                         </Link>
                       </li>
                       <li>
                         <Link to="/gift" id="bold">
-                          Contemporary Brands
+                         Eye Serums
                         </Link>
                       </li>
                       <li>
                         <Link to="/gift" id="bold">
-                          Young Adult Brands
+                       Puffiness
                         </Link>
                       </li>
                       <li>
                         <Link to="/gift" id="bold">
-                          Sandals Under $50
+                         Under Eye Creams
                         </Link>
                       </li>
                       <li>
                         <Link to="/gift" id="bold">
-                          Sneakers Under $50
+                         Under Eye Wrinkles
                         </Link>
                       </li>
-                      <li>
-                        <Link to="/gift" id="bold">
-                          Flip-Flops & Slides for the Family
-                        </Link>
-                      </li>
-                      <li>
-                        <Link to="/gift" id="bold">
-                          Nike for the Family
-                        </Link>
-                      </li>
-                      <li>
-                        <Link to="/gift" id="bold">
-                          Special Occasion
-                        </Link>
-                      </li>
-                      <li>
-                        <Link to="/gift" id="bold">
-                          Shop by Trend
-                        </Link>
-                      </li>
-                      <li>
-                        <Link to="/gift" id="bold">
-                          Nordstrom Made
-                        </Link>
-                      </li>
-                      <li>
-                        <Link to="/products/Shoes" id="bold">
-                          Women's Shoes Clearance
-                        </Link>
-                      </li>
-                      <li>
-                        <Link to="/products/Shoes" id="bold">
-                          Men's Shoes Clearance
-                        </Link>
-                      </li>
-                      <li>
-                        <Link to="/products/Shoes" id="bold">
-                          Kids' Shoes Clearance
-                        </Link>
-                      </li>
+                
                     </ul>
                   </div>
 
                   <div className="row">
-                    <header>Women's Shoes</header>
-                    <ul className="mega-links" id="line-height-new">
+                  <Heading  fontSize={"16px"}>FACE CARE</Heading>
+                    <ul className="mega-links">
                       <li>
-                        <Link to="/products/Shoes">Athletic & Running</Link>
+                        <Link to="/gift" id="bold">
+                         Anit-Ageing Creams
+                        </Link>
                       </li>
                       <li>
-                        <Link to="/products/Shoes">Boots & Booties</Link>
+                        <Link to="/gift" id="bold">
+                         Bleach Creams
+                        </Link>
                       </li>
                       <li>
-                        <Link to="/products/Shoes">Clogs</Link>
+                        <Link to="/gift" id="bold">
+                          Brightening Cream
+                        </Link>
                       </li>
                       <li>
-                        <Link to="/products/Shoes">Comfort</Link>
+                        <Link to="/gift" id="bold">
+                          Face Wash
+                        </Link>
                       </li>
                       <li>
-                        <Link to="/products/Shoes">Espadrilles</Link>
+                        <Link to="/gift" id="bold">
+                         Facial Wipes
+                        </Link>
                       </li>
                       <li>
-                        <Link to="/products/Shoes">Flats</Link>
+                        <Link to="/gift" id="bold">
+                        Face Oil
+                        </Link>
                       </li>
                       <li>
-                        <Link to="/products/Shoes">Flip-Flops & Slides</Link>
+                        <Link to="/gift" id="bold">
+                          Face Cleansers
+                        </Link>
                       </li>
                       <li>
-                        <Link to="/products/Shoes">Heels</Link>
+                        <Link to="/gift" id="bold">
+                         Facial Kits
+                        </Link>
                       </li>
                       <li>
-                        <Link to="/products/Shoes">Loafers & Oxfords</Link>
+                        <Link to="/gift" id="bold">
+                          Moisturizers
+                        </Link>
                       </li>
                       <li>
-                        <Link to="/products/Shoes">Mules</Link>
+                        <Link to="/gift" id="bold">
+                         Mask & Peels
+                        </Link>
                       </li>
                       <li>
-                        <Link to="/products/Shoes">Rain Boots</Link>
+                        <Link to="/gift" id="bold">
+                        Serums
+                        </Link>
                       </li>
                       <li>
-                        <Link to="/products/Shoes">Sandals</Link>
-                      </li>
-                      <li>
-                        <Link to="/products/Shoes">Slippers</Link>
-                      </li>
-                      <li>
-                        <Link to="/products/Shoes">Sneakers</Link>
-                      </li>
-                      <li>
-                        <Link to="/products/Shoes">Wedges</Link>
-                      </li>
-                      <li>
-                        <Link to="/products/Shoes">
-                          Extended Sizes & Widths
+                        <Link to="/gift" id="bold">
+                         Toner & Astrigents
                         </Link>
                       </li>
                     </ul>
                   </div>
                   <div className="row">
-                    <header>Men's Shoes</header>
+                    <Heading fontSize={"16px"}>BODY CARE</Heading>
                     <ul className="mega-links">
                       <li>
-                        <Link to="/products/Shoes">Athletic & Running</Link>
-                      </li>
-                      <li>
-                        <Link to="/products/Shoes">Boots</Link>
-                      </li>
-                      <li>
-                        <Link to="/products/Shoes">Comfort</Link>
-                      </li>
-                      <li>
-                        <Link to="/products/Shoes">Dress Shoes</Link>
-                      </li>
-                      <li>
-                        <Link to="/products/Shoes">Loafers & Slip-Ons</Link>
-                      </li>
-                      <li>
-                        <Link to="/products/Shoes">Oxfords & Derbys</Link>
-                      </li>
-                      <li>
-                        <Link to="/products/Shoes">Sandals & Flip-Flops</Link>
-                      </li>
-                      <li>
-                        <Link to="/products/Shoes">Slippers</Link>
-                      </li>
-                      <li>
-                        <Link to="/products/Shoes">Sneakers</Link>
-                      </li>
-                      <li>
-                        <Link to="/products/Shoes">
-                          Extended Sizes & Widths
-                        </Link>
-                      </li>
-                    </ul>
-                  </div>
-                  <div className="row">
-                    <header>Kids' Shoes</header>
-                    <ul className="mega-links">
-                      <li>
-                        <Link to="/products/Shoes">Baby (Sizes 0-4)</Link>
+                        <Link to="/products/Shoes"> </Link>
                       </li>
                       <li>
                         <Link to="/products/Shoes">Toddler (Sizes 4.5-12)</Link>
@@ -533,7 +402,7 @@ const Megha = () => {
                       </li>
                       <li>
                         <Link to="/products/Shoes">Baby (Sizes 0-4)</Link>
-                      </li>
+                      </li> 
                       <li>
                         <Link to="/products/Shoes">Toddler (Sizes 4.5-12)</Link>
                       </li>
@@ -1532,16 +1401,16 @@ const Megha = () => {
                         <Link to="gift">Palettes</Link>
                       </li>{" "}
                       <li>
-                        <Link to="gift">Powder & Setting Sprays</Link>
+                        <Link to="gift">Eye Makeup Remover</Link>
                       </li>
                       <li>
-                        <Link to="gift">Primer</Link>
+                        <Link to="gift">Eye Brow Enhancer</Link>
                       </li>
                     </ul>
                   </div>
 
                   <div className="row">
-                    <header>Skin Care</header>
+                    <Heading fontSize={"16px"}>LIPS</Heading>
                     <ul className="mega-links">
                       <li>
                         <Link to="gift">Cleansers</Link>

@@ -9,9 +9,9 @@ import axios from "axios"
 import {store} from "./Redux/store"
 
 import reportWebVitals from './reportWebVitals';
+
+
 axios.defaults.baseURL = "http://localhost:8080"
-
-
 axios.defaults.headers.post["Content-Type"]="application/json"
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
