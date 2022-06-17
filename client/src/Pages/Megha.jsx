@@ -2065,7 +2065,6 @@ const Megha = () => {
           <Box>
             <Link to="/cart"><Button _hover={{ bg: '#dd0285' }} bg={"#dd0285"} fontWeight={"bold"} color="white" leftIcon={<BsCartPlusFill></BsCartPlusFill>}>My CArt</Button>
             </Link>  
-            <Cartcounter></Cartcounter>
               </Box>
           </div>
         </div>

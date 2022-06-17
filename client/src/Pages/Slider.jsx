@@ -20,7 +20,7 @@ const Slider = ({Sliderdata}) => {
 console.log(Sliderdata,"sliderdata")
   return (
     <div>
-      <h4 style={{ paddingTop: "80px" }}>Frequenty bought together</h4>
+      <h4 style={{ paddingTop: "4rem" }}></h4>
 
       {Sliderdata?<div className="lookSliderApp">
         <Carousel breakPoints={breakPoints}>
@@ -33,9 +33,9 @@ console.log(Sliderdata,"sliderdata")
                 }}
                 className="slippersContainer"
                 key={nanoid()} >
-                <img src={item.thumbnail} />
+                <img style={{margin:"auto"}} src={item.thumbnail} />
                 {/* <button className="Quicklook">Quick Look</button> */}
-                <p  size="lg" textOverflow={"ellipsis"} overflow={"hidden"} whiteSpace="nowrap">{item.title}</p>
+                <p style={{ textOverflow:"ellipsis", overflow:"hidden" , margin:"auto" , height:"50px" ,width:"90%"}}>{item.title}</p>
                 {/* <p>{item.price.raw || item.price.from.raw}</p> */}
               </Box>
             );
