@@ -111,16 +111,25 @@ const [info ,setInfo] = useState({
     </div>
     </div>
     <Popup open={open}  onClose={closeModal}>
-        <div className="modal w-96 h-96  text-red z-1 bg-slate-400">
-          <a className="close" onClick={closeModal}>
-           x
+        <div className="modal relative z-0 w-2/3 h-96 bg-gray-100 text-red z-1 bg-w00 pl-10 pr-10 pb-10 pt-8">
+          <a className="close  " onClick={closeModal}>
+           <div className="pl-80 ml-10 text-xl text-slate-100">X</div>
           </a>
-          <div>{info.name}</div>
+          <div className=" text-sm text-black-500 font-bold">{info.name}</div>
           <div>{info.price}</div>
           <div>
-            <div>V</div>
-            <div>{qty}</div>
+            <span>^</span>
+            <span>{qty}</span>
+            <span>^</span>
+            <span><button className="border-2  text-xs p-2 ml-10 mr-4 bg-pink-400 text-white font-bold rounded-md"> 🛒   Update Cart</button></span>
+            <span>♡</span>
           </div>
+          <div>
+            <div>Check Delivery</div>
+            <input></input><span>CHECK</span>
+          </div>
+          <div>100% GENUINE PRODUCT</div>
+          <div>EASY RETURN POLICY</div>
         </div>
        
       </Popup>
