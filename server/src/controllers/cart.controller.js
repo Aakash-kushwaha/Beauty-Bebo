@@ -26,5 +26,17 @@ router.post('/', async function(req, res){
         res.status(500).send(err.message)
     }
 })
+router.delete('/:id', async function(req, res){
+    try{
+        const cart =await Cart.findByIdAndDelete(req.params.id,{
+            new:true,
+        });
+        const carts =await Cart.find().lean().exec();
+        res.status(200).send(carts)
+
+    }catch(err){
+        res.status(500).send(err.message)
+    }
+})
 
 module.exports = router;
