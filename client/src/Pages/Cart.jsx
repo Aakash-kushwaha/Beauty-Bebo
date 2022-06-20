@@ -48,7 +48,7 @@ const [info ,setInfo] = useState({
  }
  const random =Math.floor(Math.random()*100)
  return (<>
- {/* popup */}
+
  
     <div className="grid grid-cols-10 gap-2 pt-16 bg-red">
       <div className="Items col-span-7 pl-20">

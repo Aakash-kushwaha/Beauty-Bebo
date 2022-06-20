@@ -35,10 +35,11 @@ const Filtercomponenets = () => {
         <Text>Category</Text>
         <CheckboxGroup colorScheme='green' defaultValue={categoryvalues} onChange={categoryHandler}>
   <VStack alignItems={"baseline"}>
-    <Checkbox value={`men's clothing`}>men's clothing</Checkbox>
-    <Checkbox value={`women's clothing`}>Women's clothing</Checkbox>
-    <Checkbox value='electronics'>Electronics</Checkbox>
-    <Checkbox value='jewelery'>Jewellery</Checkbox>
+    <Checkbox value={`Skin type`}>Skin type</Checkbox>
+    <Checkbox value={`Price`}>Price</Checkbox>
+    <Checkbox value='Brand'>Brand</Checkbox>
+    <Checkbox value='Shades'>Shades</Checkbox>
+    <Checkbox value='Formulation'>Formulation</Checkbox>
     {/* <Checkbox value='100'>less than 100₹</Checkbox> */}
   </VStack>
 </CheckboxGroup>

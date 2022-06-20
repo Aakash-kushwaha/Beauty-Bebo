@@ -5,12 +5,14 @@ import Profile from "./Profile";
 import {
   Box,
   Flex,
+  Heading,
   IconButton,
   Image,
 
   Input,
 
   Select,
+  Text,
 
 } from "@chakra-ui/react";
 import "./navbarBottomSelect.css";
@@ -97,10 +99,10 @@ const Search=()=>{
           </Flex>
         </Flex>
 
-         <Box>
-         <Flex   >
+         <Box  >
+         <Flex  marginTop="1rem">
          <Profile></Profile>
-         <Box>Add Account</Box>
+         <Text  paddingTop="0.4rem">Add Account</Text>
          </Flex>
         
          </Box>

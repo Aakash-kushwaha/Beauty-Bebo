@@ -17,14 +17,14 @@ import { Link } from 'react-router-dom'
 const Profile = () => {
   return (
     <div>
-    <Menu>
+    <Menu width={"10px"}>
   {({ isOpen }) => (
     <>
       <MenuButton isActive={isOpen} as={Button} >
         {/* {isOpen ? 'Close' : 'Open'} */}
         <FaUserAlt></FaUserAlt>
       </MenuButton>
-      <MenuList zIndex={"100"}>
+      <MenuList zIndex={"100"}  marginLeft={"-1rem"} width="-9rem">
         <MenuItem><Link to="/login" >Log in</Link> </MenuItem>
         <MenuItem ><Link to="/signup" >Sign up</Link></MenuItem>
       </MenuList>
