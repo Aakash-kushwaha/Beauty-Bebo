@@ -111,25 +111,26 @@ const [info ,setInfo] = useState({
     </div>
     </div>
     <Popup open={open}  onClose={closeModal}>
-        <div className="modal relative z-0 w-2/3 h-96 bg-gray-100 text-red z-1 bg-w00 pl-10 pr-10 pb-10 pt-8">
-          <a className="close  " onClick={closeModal}>
-           <div className="pl-80 ml-10 text-xl text-slate-100">X</div>
+        <div className="modal relative z-0 w-2/3 bg-gray-100 text-red z-1 bg-w00 pl-10 pr-10 pb-10 pt-8 overflow-scroll" >
+          <a className="close" onClick={closeModal} href="#" >
+           <div className="pl-80 ml-10 text-xl text-black-100">X</div>
           </a>
           <div className=" text-sm text-black-500 font-bold">{info.name}</div>
           <div>{info.price}</div>
           <div>
-            <span>^</span>
+          <span className="font-bold mr-10">QTY</span>
+           <span className="border-2 border-slate p-1" > <span className="text-sm pr-2 text-slate-400">^</span>
             <span>{qty}</span>
-            <span>^</span>
+            <span className="text-sm  pl-2 pr-1 text-slate-400">^</span></span>
             <span><button className="border-2  text-xs p-2 ml-10 mr-4 bg-pink-400 text-white font-bold rounded-md"> 🛒   Update Cart</button></span>
-            <span>♡</span>
+            <span className="border-2 text-xs p-2 bg-slate-400 rounded-md">♡</span>
           </div>
-          <div>
-            <div>Check Delivery</div>
-            <input></input><span>CHECK</span>
+          <div className="border-2 border-slate-300 p-1 mt-10">
+            <div className="mb-2 font-bold">Check Delivery</div>
+            <input onChange={(e)=>setValue(e.target.value)} placeholder="ZipCode"  className="border-2 border-slate-200 focus:outline-none w-64 mb-2"></input><span  className="border-2 border-slate-400 bg-gray-500 text-white pl-2 pr-2 ">CHECK</span>
           </div>
-          <div>100% GENUINE PRODUCT</div>
-          <div>EASY RETURN POLICY</div>
+          <div className="border-2 border-slate-300 p-1 mt-6 font-bold text-slate-400 bg-gray-200 ">100% GENUINE PRODUCT</div>
+          <div className="border-2 border-slate-300 p-1 mt-6 font-bold text-slate-400 bg-gray-200 mb-10 ">EASY RETURN POLICY</div>
         </div>
        
       </Popup>
