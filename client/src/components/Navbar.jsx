@@ -98,7 +98,7 @@ const Search=()=>{
         </Flex>
 
          <Box>
-         <Flex    border={"2px solid pink"}>
+         <Flex   >
          <Profile></Profile>
          <Box>Add Account</Box>
          </Flex>

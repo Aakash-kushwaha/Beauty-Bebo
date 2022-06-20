@@ -484,7 +484,7 @@ const Megha = () => {
                 className="desktop-item"
                 onClick={() => setHover((prev) => !prev)}
               >
-                Activewear
+                HAIR
               </a>
               <input type="checkbox" id="showMega" />
               <label htmlFor="showMega" className="mobile-item">
@@ -717,7 +717,7 @@ const Megha = () => {
                 className="desktop-item"
                 onClick={() => setHover((prev) => !prev)}
               >
-                Bags&Accessories
+               PERSONAL CARE
               </a>
               <input type="checkbox" id="showMega" />
               <label htmlFor="showMega" className="mobile-item">
@@ -975,7 +975,7 @@ const Megha = () => {
                 className="desktop-item"
                 onClick={() => setHover((prev) => !prev)}
               >
-                Home
+                MOM & BABY CARE
               </a>
               <input type="checkbox" id="showMega" />
               <label htmlFor="showMega" className="mobile-item">
@@ -1254,7 +1254,7 @@ const Megha = () => {
                 className="desktop-item"
                 onClick={() => setHover((prev) => !prev)}
               >
-                Beauty
+                FREGRANCE
               </a>
               <input type="checkbox" id="showMega" />
               <label htmlFor="showMega" className="mobile-item">
@@ -1525,7 +1525,7 @@ const Megha = () => {
                 className="desktop-item"
                 onClick={() => setHover((prev) => !prev)}
               >
-                exampe12
+                AYURVEDA
               </a>
               <input type="checkbox" id="showMega" />
               <label htmlFor="showMega" className="mobile-item">
@@ -1796,7 +1796,7 @@ const Megha = () => {
                 className="desktop-item"
                 onClick={() => setHover((prev) => !prev)}
               >
-               exampe124
+               BRANDS
               </a>
               <input type="checkbox" id="showMega" />
               <label htmlFor="showMega" className="mobile-item">

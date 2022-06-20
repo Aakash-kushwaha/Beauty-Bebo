@@ -30,7 +30,7 @@ const Filtercomponenets = () => {
 
   return (
     <Box>
-      <Box display={{base:"none",md:"block"}} p="1rem 1rem" border="1px solid red">
+      <Box display={{base:"none",md:"block"}} p="1rem 1rem">
         <Text fontSize="2xl">Filters</Text>
         <Text>Category</Text>
         <CheckboxGroup colorScheme='green' defaultValue={categoryvalues} onChange={categoryHandler}>

@@ -44,7 +44,7 @@ import { Box, Heading } from "@chakra-ui/react";
         <Box>Fregrence</Box>
         <Box>Ayurveda</Box>
       </div>
-        <div style={{width:"70%",height:"300px"}} className="slideSliderApp">
+        <div style={{width:"70%",height:"350px",padding:"1rem"}} className="slideSliderApp">
           <Slider style={{width:"100%",height:"100%"}} {...settings}>{renderSlides()}</Slider>
         </div>
         .

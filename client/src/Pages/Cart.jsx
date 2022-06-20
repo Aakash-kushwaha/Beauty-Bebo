@@ -27,7 +27,7 @@ const [info ,setInfo] = useState({
    },[data]);
  useEffect(()=>{
   const getdata =async()=>{
-    const res = await fetch("http://localhost:8080/cart");
+    const res = await fetch("https://beautybeboproject.herokuapp.com/cart");
     let data = await res.json();
     setData(data);
     console.log(data);
