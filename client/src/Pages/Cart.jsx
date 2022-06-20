@@ -86,7 +86,7 @@ const [info ,setInfo] = useState({
     })}
     <div className="border-2 "></div>
     <button className="border-2 border-black-400 w-48 text-sm p-2 bg-pink-600 hover:bg-slate-700 hover:text-white  mr-10 mt-4 mb-2 ">CONTINUE SHOPPING</button>
-    <button className="border-2 border-black-400 w-48 text-sm p-2  bg-pink-600 hover:bg-slate-700 hover:text-white ">UPDATE SHOPPING CART</button>
+    <button className="border-2 border-black-400 w-48 text-sm p-2  bg-pink-600 hover:bg-slate-700 hover:text-white " onClick={()=>setOpen(o => !o)}>UPDATE SHOPPING CART</button>
       </div>
       <div className="summary border-2 h-fit col-span-3 mt-2  p-8">
       <div>SUMMARY</div>
