@@ -9,6 +9,7 @@ import Home from '../Pages/Home'
 import Megha from '../Pages/Megha'
 import Signup from '../Pages/Signup'
 import Login from '../Pages/Login'
+import CheckOut from '../Pages/CheckOut'
 
 
 const Alllroutes = () => {
@@ -24,6 +25,7 @@ const Alllroutes = () => {
            <Route path="/cart" element={<Cart></Cart>}></Route>
            <Route path="/signup" element={<Signup></Signup>}></Route>
            <Route path="/login" element={<Login></Login>}></Route>
+           <Route path ="/checkout" element={<CheckOut></CheckOut>}></Route>
         </Routes>
      <Footer></Footer>
     </div>

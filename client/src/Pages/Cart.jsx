@@ -1,7 +1,8 @@
 import React from 'react';
 import {useState,useEffect} from 'react';
 import { useDispatch, useSelector } from 'react-redux'
-import { getCartData } from '../Redux/products/action'
+import { getCartData } from '../Redux/products/action';
+import {Link} from 'react-router-dom'
 import Popup from 'reactjs-popup'
 const Cart = () => {
   const [open, setOpen] = useState(false);
@@ -103,7 +104,8 @@ const [info ,setInfo] = useState({
           <div>{(totalPrice+random).toFixed(2)}</div>
         </div>
         <div className="border-2 p-2 text-sm font-bold  text-black-600 bg-slate-200">APPLY DISCOUNT CODE</div>
-        <div className="border-2 p-2 text-sm font-bold  text-black-600 bg-pink-600  pl-20 pt-3 pb-3 mt-5 hover:bg-slate-700 hover:text-white">PROCEED TO CHECKOUT</div>
+        <Link to="/checkout"><div  className="border-2 p-2 text-sm font-bold  text-black-600 bg-pink-600  pl-20 pt-3 pb-3 mt-5 hover:bg-slate-700 hover:text-white">PROCEED TO CHECKOUT</div></Link>
+        
       </div>
       <div>
       
