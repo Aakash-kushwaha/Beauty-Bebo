@@ -4,6 +4,7 @@ import { useDispatch, useSelector } from 'react-redux'
 import { getCartData } from '../Redux/products/action';
 import {Link} from 'react-router-dom'
 import Popup from 'reactjs-popup'
+
 const Cart = () => {
   const [open, setOpen] = useState(false);
   const closeModal = () => setOpen(false);
@@ -29,7 +30,7 @@ const [info ,setInfo] = useState({
   const getdata =async()=>{
     const res = await fetch("https://beautybeboproject.herokuapp.com/cart");
     let data = await res.json();
-    setData(data);
+    setData(data)
     console.log(data);
 
   }
@@ -37,7 +38,7 @@ const [info ,setInfo] = useState({
  },[])
  
  const handleDelete =async(id)=>{
-  const res =await fetch("http://localhost:8080/cart/"+id,{
+  const res =await fetch("https://beautybeboproject.herokuapp.com/cart/"+id,{
     method: "DELETE",
    headers: {'Content-Type': 'application/json'}
   })
@@ -129,7 +130,7 @@ const [info ,setInfo] = useState({
           </div>
           <div className="border-2 border-slate-300 p-1 mt-10">
             <div className="mb-2 font-bold">Check Delivery</div>
-            <input onChange={(e)=>setValue(e.target.value)} placeholder="ZipCode"  className="border-2 border-slate-200 focus:outline-none w-64 mb-2"></input><span  className="border-2 border-slate-400 bg-gray-500 text-white pl-2 pr-2 ">CHECK</span>
+            <input onChange={(e)=>setValue(e.target.value)} placeholder="ZipCode" type="text" className="border-2 border-slate-200 focus:outline-none w-64 mb-2"></input><button className="border-2 border-slate-400 bg-gray-500 text-white pl-2 pr-2 " onClick={()=>{value.length===6?alert("Pincode is valid"):alert("PIncode is not valid")}}>CHECK</button>
           </div>
           <div className="border-2 border-slate-300 p-1 mt-6 font-bold text-slate-400 bg-gray-200 ">100% GENUINE PRODUCT</div>
           <div className="border-2 border-slate-300 p-1 mt-6 font-bold text-slate-400 bg-gray-200 mb-10 ">EASY RETURN POLICY</div>
