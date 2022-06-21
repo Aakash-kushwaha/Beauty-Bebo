@@ -246,9 +246,11 @@ nav .wrapper {
   }
   #menu-btn:checked ~ .btn.menu-btn {
     display: none;
+    overflow-y: hidden;
   }
   #close-btn:checked ~ .btn.menu-btn {
     display: block;
+    overflow-y: hidden;
   }
   .nav-links li {
     margin: 15px 10px;
@@ -257,6 +259,7 @@ nav .wrapper {
     padding: 0 20px;
     display: block;
     font-size: 20px;
+    overflow-y: hidden;
   }
   .nav-links .drop-menu {
     position: static;
@@ -268,6 +271,7 @@ nav .wrapper {
     max-height: 0px;
     overflow: hidden;
     box-shadow: none;
+    overflow-y: hidden;
     transition: all 0.3s ease;
   }
   #showDrop:checked ~ .drop-menu,

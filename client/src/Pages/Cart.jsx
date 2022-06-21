@@ -28,7 +28,7 @@ const [info ,setInfo] = useState({
    },[data]);
  useEffect(()=>{
   const getdata =async()=>{
-    const res = await fetch("https://beautybeboproject.herokuapp.com/cart");
+    const res = await fetch("https://beautyappbebo.herokuapp.com/cart");
     let data = await res.json();
     setData(data)
     console.log(data);
@@ -38,7 +38,7 @@ const [info ,setInfo] = useState({
  },[])
  
  const handleDelete =async(id)=>{
-  const res =await fetch("https://beautybeboproject.herokuapp.com/cart/"+id,{
+  const res =await fetch("https://beautyappbebo.herokuapp.com/cart/"+id,{
     method: "DELETE",
    headers: {'Content-Type': 'application/json'}
   })
