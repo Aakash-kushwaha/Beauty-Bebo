@@ -1,5 +1,6 @@
 import { Button, Flex, Heading, Input } from '@chakra-ui/react'
 import React from 'react'
+import { Link } from 'react-router-dom'
 import styles from "./Signup.module.css"
 
 const Signup = () => {
@@ -30,10 +31,10 @@ const Signup = () => {
             <Input></Input>
           </div>
           <div className={styles.inputdiv}>
-          <span>Confirem Password</span>
+          <span>Confirm Password</span>
             <Input></Input>
           </div>
-          <Button color={"white"}  bg={"#444444"}  _hover={{ bg: '#dd0285' }}>Create Account</Button>
+         <Link to={"/login"}> <Button color={"white"}  bg={"#444444"}  _hover={{ bg: '#dd0285' }}>Create Account</Button></Link>
       </div>
     </div>
   )

@@ -40,10 +40,7 @@ const Products = () => {
 
 
 
-  const addToCart = (el) => {
-    // console.log(currentproduct,"curpro")
-     el&& dispatch(addproductCart(el))
-  };
+
 
 
 
@@ -85,8 +82,12 @@ const Products = () => {
 
 
  function ProductSimple({image,title,category,price,sendToDescription,id,el}) {
-
-   
+  const dispatch = useDispatch()
+  const addToCart = (el) => {
+  
+    // console.log(currentproduct,"curpro")
+     el&& dispatch(addproductCart(el))
+  };
   //  console.log(price,"price")
   return (
     <div>
@@ -104,7 +105,7 @@ const Products = () => {
        </div>
        <Button mb={".5rem"} leftIcon={<BsCart4></BsCart4>} 
        color={"white"} bg={"#dd0285"}  _hover={{ bg: '#dd0285' }}
-        onClick={()=>addproductCart(el)}>Add to Cart</Button>
+        onClick={()=>addToCart(el)}>Add to Cart</Button>
       </div>
     </div>
   );
