@@ -15,8 +15,8 @@ const [info ,setInfo] = useState({
 });
    const [data,setData] = useState([]);
   const [qty,setQty]=useState(1);
-  const [totalPrice,setTotalPrice] = useState(0)
-  useEffect(()=>{
+  const [totalPrice,setTotalPrice] = useState(0);
+  const getTotal=  ()=>{
     data.map((el)=>{
       console.log(el.data.price.extracted)
       return setTotalPrice((prev)=>{
@@ -25,15 +25,20 @@ const [info ,setInfo] = useState({
         return prev;
          })
     })
-   },[data]);
- useEffect(()=>{
+   }
+  
+  useEffect(()=>{getTotal()},
+    
+  [data]);
   const getdata =async()=>{
     const res = await fetch("https://beautyappbebo.herokuapp.com/cart");
     let data = await res.json();
     setData(data)
-    console.log(data);
+    console.log("c",data);
 
   }
+ useEffect(()=>{
+  
   getdata();
  },[])
  
@@ -43,8 +48,13 @@ const [info ,setInfo] = useState({
    headers: {'Content-Type': 'application/json'}
   })
   let newdata= await res.json();
-  setData(newdata);
-  console.log(newdata,id)
+  // setData(newdata);
+ 
+  console.log(newdata,id);
+  setTotalPrice(0)
+  getdata();
+  // getTotal();
+  console.log("check",totalPrice)
  
  }
  const random =Math.floor(Math.random()*100)
@@ -98,11 +108,11 @@ const [info ,setInfo] = useState({
         </div>
         <div className="grid grid-cols-4 border-2 p-2 mt-2 mb-2 text-sm  text-black-400">
           <div className="col-span-3 text-sm  text-black-400">Shipping (Best Way - Max 7 Business days)	</div>
-          <div >{random}</div>
+          <div >{totalPrice>0?random:0}</div>
         </div>
         <div className="grid grid-cols-4 border-2 p-2 mt-2 mb-2 text-sm  text-black-400">
           <div className="col-span-3">Order Total Incl .GST	</div>
-          <div>{(totalPrice+random).toFixed(2)}</div>
+          <div>{(totalPrice>0?totalPrice+random:0).toFixed(2)}</div>
         </div>
         <div className="border-2 p-2 text-sm font-bold  text-black-600 bg-slate-200">APPLY DISCOUNT CODE</div>
         <Link to="/checkout"><div  className="border-2 p-2 text-sm font-bold  text-black-600 bg-pink-600  pl-20 pt-3 pb-3 mt-5 hover:bg-slate-700 hover:text-white">PROCEED TO CHECKOUT</div></Link>
