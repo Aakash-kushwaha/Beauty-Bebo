@@ -87,6 +87,8 @@ const Products = () => {
   
     // console.log(currentproduct,"curpro")
      el&& dispatch(addproductCart(el))
+
+     alert("Product added to cart")
   };
   //  console.log(price,"price")
   return (

@@ -1,8 +1,15 @@
 import React from 'react'
 import styles from "./login.module.css"
 import {Button, Flex, Input} from "@chakra-ui/react"
+import { useNavigate } from 'react-router-dom'
 
 const Login = () => {
+  const navigate = useNavigate()
+  const CreateAccount=()=>{
+    alert("Login Successfully");
+  navigate("/")
+
+  }
   return (
     <div>
        <Flex justifyContent={"space-around"} mt="10rem">
@@ -17,7 +24,9 @@ const Login = () => {
             <span>PASSWORD</span>
             <Input></Input>
           </div>
-          <Button color={"white"} bg={"#444444"}  _hover={{ bg: '#dd0285' }}>SIGN IN</Button>
+          <Button color={"white"} bg={"#444444"}  _hover={{ bg: '#dd0285' }} 
+          onClick={()=>CreateAccount()}
+          >SIGN IN</Button>
         </div>
         <div className={styles.container}>
         <h1 className = {styles.heading}>NEW CUSTOMER</h1>

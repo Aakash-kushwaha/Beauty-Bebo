@@ -51,7 +51,8 @@ export default function Product() {
 
   const addToCart = () => {
     // console.log(currentproduct,"curpro")
-      currentproduct&& dispatch(addproductCart(currentproduct))
+      currentproduct&& dispatch(addproductCart(currentproduct));
+      alert("Product added successfully!")
   };
 
 
