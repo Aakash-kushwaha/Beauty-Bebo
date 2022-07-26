@@ -15,7 +15,7 @@ Beauty Bebo is India’s fastest growing online retail store for the day to day 
         <h2>Cart Page</h2>
     <img src="https://github.com/Aakash-kushwaha/Beauty-Bebo/blob/main/client/src/screenshots/cart%20page.png" />
       <h2>Payment page</h2>
-    <img src="https://www.mynordstromslogin.com/wp-content/uploads/2019/09/nordstrom-employee-discount.png" />
+    <img src="https://github.com/Aakash-kushwaha/Beauty-Bebo/blob/main/client/src/screenshots/checkout%20page.png" />
     <h1>[Getting Started]</h1>
     <h3>Execution</h3>
     <p>If you want to run our project in your local machine</p>
