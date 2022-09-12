@@ -11,7 +11,7 @@ import {store} from "./Redux/store"
 import reportWebVitals from './reportWebVitals';
 
 
-axios.defaults.baseURL = "https://beautyappbebo.herokuapp.com/"
+axios.defaults.baseURL = "https://salty-tor-26566.herokuapp.com"
 axios.defaults.headers.post["Content-Type"]="application/json"
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(

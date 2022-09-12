@@ -1,6 +1,10 @@
 const express = require('express');
 const app = express();
+const cors = require("cors");
 app.use(express.json());
+app.use(cors())
+const PORT = process.env.PORT;
+
 
 const facewashController =require('./controllers/facewash.controller');
 const skincareController = require('./controllers/skincare.controller');
